@@ -1,13 +1,9 @@
 package main
 
 import (
-	//"fmt"
-	"github.com/AllenDang/w32"
-	//"os"
-	"osnn/wingo"
+	"github.com/yamnikov-oleg/w32"
+	"github.com/yamnikov-oleg/wingo"
 	"strings"
-	//"syscall"
-	//"unsafe"
 )
 
 var (
