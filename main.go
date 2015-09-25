@@ -12,13 +12,9 @@ var (
 )
 
 const (
-	RIGHT_GAP  = 0
-	BOTTOM_GAP = 0
-
 	CTRL_INTERVAL = 10
 	TE_HEIGHT     = 25
 	BUTTON_WIDTH  = 90
-	SAVE_HEIGHT   = 40
 )
 
 var (
@@ -40,18 +36,18 @@ func updateMetrics() {
 	WND_HEIGHT = clSize.Y
 
 	listbox.SetPosition(wingo.Vector{CTRL_INTERVAL, CTRL_INTERVAL})
-	listbox.SetSize(wingo.Vector{WND_WIDTH - 2*CTRL_INTERVAL - RIGHT_GAP, WND_HEIGHT - SAVE_HEIGHT - TE_HEIGHT*2 - CTRL_INTERVAL*6 - BOTTOM_GAP})
+	listbox.SetSize(wingo.Vector{WND_WIDTH - 2*CTRL_INTERVAL, WND_HEIGHT - TE_HEIGHT*2 - CTRL_INTERVAL*4})
 
-	teUpdate.SetPosition(wingo.Vector{CTRL_INTERVAL, WND_HEIGHT - SAVE_HEIGHT - TE_HEIGHT*2 - CTRL_INTERVAL*4 - BOTTOM_GAP})
-	teUpdate.SetSize(wingo.Vector{WND_WIDTH - BUTTON_WIDTH - CTRL_INTERVAL*3 - RIGHT_GAP, TE_HEIGHT})
+	teUpdate.SetPosition(wingo.Vector{CTRL_INTERVAL, WND_HEIGHT - TE_HEIGHT*2 - CTRL_INTERVAL*2})
+	teUpdate.SetSize(wingo.Vector{WND_WIDTH - BUTTON_WIDTH - CTRL_INTERVAL*3, TE_HEIGHT})
 
-	deleteButton.SetPosition(wingo.Vector{WND_WIDTH - BUTTON_WIDTH - CTRL_INTERVAL - RIGHT_GAP, WND_HEIGHT - SAVE_HEIGHT - TE_HEIGHT*2 - CTRL_INTERVAL*4 - BOTTOM_GAP})
+	deleteButton.SetPosition(wingo.Vector{WND_WIDTH - BUTTON_WIDTH - CTRL_INTERVAL, WND_HEIGHT - TE_HEIGHT*2 - CTRL_INTERVAL*2})
 	deleteButton.SetSize(wingo.Vector{BUTTON_WIDTH, TE_HEIGHT})
 
-	teAppend.SetPosition(wingo.Vector{CTRL_INTERVAL, WND_HEIGHT - SAVE_HEIGHT - TE_HEIGHT - CTRL_INTERVAL*3 - BOTTOM_GAP})
-	teAppend.SetSize(wingo.Vector{WND_WIDTH - BUTTON_WIDTH - CTRL_INTERVAL*3 - RIGHT_GAP, TE_HEIGHT})
+	teAppend.SetPosition(wingo.Vector{CTRL_INTERVAL, WND_HEIGHT - TE_HEIGHT - CTRL_INTERVAL})
+	teAppend.SetSize(wingo.Vector{WND_WIDTH - BUTTON_WIDTH - CTRL_INTERVAL*3, TE_HEIGHT})
 
-	appendButton.SetPosition(wingo.Vector{WND_WIDTH - BUTTON_WIDTH - CTRL_INTERVAL - RIGHT_GAP, WND_HEIGHT - SAVE_HEIGHT - TE_HEIGHT - CTRL_INTERVAL*3 - BOTTOM_GAP})
+	appendButton.SetPosition(wingo.Vector{WND_WIDTH - BUTTON_WIDTH - CTRL_INTERVAL, WND_HEIGHT - TE_HEIGHT - CTRL_INTERVAL})
 	appendButton.SetSize(wingo.Vector{BUTTON_WIDTH, TE_HEIGHT})
 
 }
